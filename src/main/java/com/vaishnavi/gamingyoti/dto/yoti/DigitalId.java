@@ -1,4 +1,4 @@
-package com.vaishnavi.gamingyoti.dto;
+package com.vaishnavi.gamingyoti.dto.yoti;
 import com.fasterxml.jackson.annotation.JsonProperty;
 public class DigitalId {
 

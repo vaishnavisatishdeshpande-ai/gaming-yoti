@@ -1,7 +1,7 @@
 package com.vaishnavi.gamingyoti.controller;
 
-import com.vaishnavi.gamingyoti.dto.SignupRequest;
-import com.vaishnavi.gamingyoti.dto.SignupResponse;
+import com.vaishnavi.gamingyoti.dto.request.SignupRequest;
+import com.vaishnavi.gamingyoti.dto.response.SignupResponse;
 import com.vaishnavi.gamingyoti.model.User;
 import com.vaishnavi.gamingyoti.service.RegistrationService;
 import org.springframework.http.ResponseEntity;

@@ -1,5 +1,9 @@
-package com.vaishnavi.gamingyoti.dto;
+package com.vaishnavi.gamingyoti.dto.request;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.vaishnavi.gamingyoti.dto.yoti.AgeEstimation;
+import com.vaishnavi.gamingyoti.dto.yoti.Callback;
+import com.vaishnavi.gamingyoti.dto.yoti.DigitalId;
+import com.vaishnavi.gamingyoti.dto.yoti.DocScan;
 
 public class CreateSessionRequest {
 

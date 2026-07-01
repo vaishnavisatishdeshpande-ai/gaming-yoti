@@ -1,7 +1,14 @@
 package com.vaishnavi.gamingyoti.client;
 
 import com.vaishnavi.gamingyoti.config.YotiProperties;
-import com.vaishnavi.gamingyoti.dto.*;
+import com.vaishnavi.gamingyoti.dto.request.CreateSessionRequest;
+import com.vaishnavi.gamingyoti.dto.response.YotiCreateSessionResponse;
+import com.vaishnavi.gamingyoti.dto.response.YotiSessionResultResponse;
+import com.vaishnavi.gamingyoti.dto.response.YotiSessionResponse;
+import com.vaishnavi.gamingyoti.dto.yoti.AgeEstimation;
+import com.vaishnavi.gamingyoti.dto.yoti.Callback;
+import com.vaishnavi.gamingyoti.dto.yoti.DigitalId;
+import com.vaishnavi.gamingyoti.dto.yoti.DocScan;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
@@ -22,14 +29,14 @@ public class YotiClient {
     }
 
 
-    public SessionResultResponse getSessionResult(String sessionId) {
+    public YotiSessionResultResponse getSessionResult(String sessionId) {
 
         return restClient.get()
                 .uri(BASE_URL + "/sessions/" + sessionId + "/result")
                 .header("Authorization", "Bearer " + properties.getApiKey())
                 .header("Yoti-SDK-Id", properties.getSdkId())
                 .retrieve()
-                .body(SessionResultResponse.class);
+                .body(YotiSessionResultResponse.class);
     }
 
     public YotiSessionResponse createSession() {
@@ -74,14 +81,14 @@ public class YotiClient {
         request.setSynchronousChecks(true);
 
 
-        CreateSessionResponse response = restClient.post()
+        YotiCreateSessionResponse response = restClient.post()
                 .uri(BASE_URL + "/sessions")
                 .header("Authorization", "Bearer " + properties.getApiKey())
                 .header("Yoti-SDK-Id", properties.getSdkId())
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(request)
                 .retrieve()
-                .body(CreateSessionResponse.class);
+                .body(YotiCreateSessionResponse.class);
 
         String sessionUrl =
                 "https://age.yoti.com?sessionId="

@@ -1,7 +1,7 @@
 package com.vaishnavi.gamingyoti.service;
 
 import com.vaishnavi.gamingyoti.client.YotiClient;
-import com.vaishnavi.gamingyoti.dto.SessionResultResponse;
+import com.vaishnavi.gamingyoti.dto.response.YotiSessionResultResponse;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,7 +13,7 @@ public class VerificationService {
         this.yotiClient = yotiClient;
     }
 
-    public SessionResultResponse getVerificationResult(String sessionId) {
+    public YotiSessionResultResponse getVerificationResult(String sessionId) {
         return yotiClient.getSessionResult(sessionId);
     }
 }

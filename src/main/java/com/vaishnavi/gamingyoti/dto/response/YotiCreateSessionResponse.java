@@ -1,8 +1,8 @@
-package com.vaishnavi.gamingyoti.dto;
+package com.vaishnavi.gamingyoti.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class CreateSessionResponse {
+public class YotiCreateSessionResponse {
 
     @JsonProperty("id")
     private String id;
@@ -13,7 +13,7 @@ public class CreateSessionResponse {
     @JsonProperty("status")
     private String status;
 
-    public CreateSessionResponse() {
+    public YotiCreateSessionResponse() {
     }
 
     public String getId() {

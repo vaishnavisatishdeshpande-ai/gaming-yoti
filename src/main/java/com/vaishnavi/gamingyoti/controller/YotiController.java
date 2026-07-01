@@ -1,11 +1,8 @@
 package com.vaishnavi.gamingyoti.controller;
 
 import com.vaishnavi.gamingyoti.client.YotiClient;
-import com.vaishnavi.gamingyoti.dto.CreateSessionResponse;
-import com.vaishnavi.gamingyoti.dto.SessionResultResponse;
-import com.vaishnavi.gamingyoti.dto.VerificationResultResponse;
-import com.vaishnavi.gamingyoti.dto.YotiSessionResponse;
-import org.springframework.http.ResponseEntity;
+import com.vaishnavi.gamingyoti.dto.response.YotiSessionResultResponse;
+import com.vaishnavi.gamingyoti.dto.response.YotiSessionResponse;
 import org.springframework.web.bind.annotation.*;
 import com.vaishnavi.gamingyoti.service.VerificationService;
 
@@ -30,7 +27,7 @@ public class YotiController {
     }
 
     @GetMapping("/result/{sessionId}")
-    public SessionResultResponse getResult(
+    public YotiSessionResultResponse getResult(
             @PathVariable String sessionId) {
 
         return verificationService.getVerificationResult(sessionId);

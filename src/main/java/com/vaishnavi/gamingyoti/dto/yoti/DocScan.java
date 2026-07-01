@@ -1,12 +1,14 @@
-package com.vaishnavi.gamingyoti.dto;
-
+package com.vaishnavi.gamingyoti.dto.yoti;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class AgeEstimation {
+public class DocScan {
 
     private Boolean allowed;
     private Integer threshold;
+    private String authenticity;
     private String level;
+    @JsonProperty("preset_issuing_country")
+    private String presetIssuingCountry;
 
     @JsonProperty("retry_limit")
     private Integer retryLimit;
@@ -27,12 +29,28 @@ public class AgeEstimation {
         this.threshold = threshold;
     }
 
+    public String getAuthenticity() {
+        return authenticity;
+    }
+
+    public void setAuthenticity(String authenticity) {
+        this.authenticity = authenticity;
+    }
+
     public String getLevel() {
         return level;
     }
 
     public void setLevel(String level) {
         this.level = level;
+    }
+
+    public String getPresetIssuingCountry() {
+        return presetIssuingCountry;
+    }
+
+    public void setPresetIssuingCountry(String presetIssuingCountry) {
+        this.presetIssuingCountry = presetIssuingCountry;
     }
 
     public Integer getRetryLimit() {

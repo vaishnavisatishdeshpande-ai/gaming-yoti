@@ -1,6 +1,6 @@
 package com.vaishnavi.gamingyoti.service;
 
-import com.vaishnavi.gamingyoti.dto.SignupRequest;
+import com.vaishnavi.gamingyoti.dto.request.SignupRequest;
 import com.vaishnavi.gamingyoti.model.User;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.vaishnavi.gamingyoti.dto;
+package com.vaishnavi.gamingyoti.dto.response;
 
 public class SignupResponse {
 

@@ -38,7 +38,6 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
             return;
         }
 
-        // Step 2 - Create Yoti Session
         const sessionResponse = await fetch("/api/create-yoti-session", {
 
             method: "POST"
@@ -55,13 +54,11 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
             return;
         }
 
-        // Step 3 - Read Backend Response
         const session = await sessionResponse.json();
 
         message.className = "success";
         message.innerHTML = "Redirecting to Yoti...";
 
-        // Step 4 - Redirect to Yoti Verification
         window.location.href = session.sessionUrl;
 
     }
