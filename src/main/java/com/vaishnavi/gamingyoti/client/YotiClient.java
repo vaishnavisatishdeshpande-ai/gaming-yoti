@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 public class YotiClient {
 
     private static final String BASE_URL = "https://age.yoti.com/api/v1";
-    private static final String CALLBACK_URL = "https://untried-winking-protozoan.ngrok-free.dev/result.html";
+    private static final String CALLBACK_URL = "https://gaming-yoti.onrender.com/result.html";
     private final RestClient restClient = RestClient.create();
 
     private final YotiProperties properties;
