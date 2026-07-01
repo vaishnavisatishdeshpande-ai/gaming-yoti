@@ -1,5 +1,4 @@
 package com.vaishnavi.gamingyoti;
-import lombok.Data;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import com.vaishnavi.gamingyoti.config.YotiProperties;
 

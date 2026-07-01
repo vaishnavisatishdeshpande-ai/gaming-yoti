@@ -4,14 +4,19 @@ public class SignupResponse {
 
     private String message;
     private String sessionId;
+    private String sessionUrl;
     private String verificationStatus;
 
     public SignupResponse() {
     }
 
-    public SignupResponse(String message, String sessionId, String verificationStatus) {
+    public SignupResponse(String message,
+                          String sessionId,
+                          String sessionUrl,
+                          String verificationStatus) {
         this.message = message;
         this.sessionId = sessionId;
+        this.sessionUrl = sessionUrl;
         this.verificationStatus = verificationStatus;
     }
 
@@ -29,6 +34,14 @@ public class SignupResponse {
 
     public void setSessionId(String sessionId) {
         this.sessionId = sessionId;
+    }
+
+    public String getSessionUrl() {
+        return sessionUrl;
+    }
+
+    public void setSessionUrl(String sessionUrl) {
+        this.sessionUrl = sessionUrl;
     }
 
     public String getVerificationStatus() {

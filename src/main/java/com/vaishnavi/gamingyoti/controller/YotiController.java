@@ -21,10 +21,10 @@ public class YotiController {
         this.verificationService = verificationService;
     }
 
-    @PostMapping("/create-yoti-session")
-    public YotiSessionResponse createSession() {
-        return yotiClient.createSession();
-    }
+//    @PostMapping("/create-yoti-session")
+//    public YotiSessionResponse createSession() {
+//        return yotiClient.createSession();
+//    }
 
     @GetMapping("/result/{sessionId}")
     public YotiSessionResultResponse getResult(

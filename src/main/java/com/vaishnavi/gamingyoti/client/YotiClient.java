@@ -39,7 +39,7 @@ public class YotiClient {
                 .body(YotiSessionResultResponse.class);
     }
 
-    public YotiSessionResponse createSession() {
+    public YotiSessionResponse createSession(String referenceId) {
         log.info("API Key Loaded: {}", properties.getApiKey() != null);
         log.info("SDK ID Loaded: {}", properties.getSdkId() != null);
         log.info("Age Threshold: {}", properties.getAgeThreshold());
@@ -75,7 +75,7 @@ public class YotiClient {
         request.setDigitalId(digitalId);
         request.setDocScan(docScan);
         request.setCallback(callback);
-        request.setReferenceId("test_user_001");
+        request.setReferenceId(referenceId);
         request.setRetryEnabled(true);
         request.setResumeEnabled(true);
         request.setSynchronousChecks(true);

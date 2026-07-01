@@ -15,7 +15,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
 
     try {
 
-        const signupResponse = await fetch("/api/create-yoti-session", {
+        const response = await fetch("/api/signup", {
 
             method: "POST",
 
@@ -27,26 +27,9 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
 
         });
 
+        if (!response.ok) {
 
-        if (!signupResponse.ok) {
-
-            const error = await signupResponse.text();
-
-            message.className = "error";
-            message.innerHTML = error;
-
-            return;
-        }
-
-        const sessionResponse = await fetch("/api/create-yoti-session", {
-
-            method: "POST"
-
-        });
-
-        if (!sessionResponse.ok) {
-
-            const error = await sessionResponse.text();
+            const error = await response.text();
 
             message.className = "error";
             message.innerHTML = error;
@@ -54,15 +37,14 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
             return;
         }
 
-        const session = await sessionResponse.json();
+        const signup = await response.json();
 
         message.className = "success";
         message.innerHTML = "Redirecting to Yoti...";
 
-        window.location.href = session.sessionUrl;
+        window.location.href = signup.sessionUrl;
 
-    }
-    catch (e) {
+    } catch (e) {
 
         message.className = "error";
         message.innerHTML = "Something went wrong.";
