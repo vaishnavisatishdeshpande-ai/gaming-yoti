@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: gaming-yoti
+
+server:
+  port: 8080
+
+yoti:
+  api-key: ${YOTI_API_KEY:}
+  sdk-id: ${YOTI_SDK_ID:}
+  age-threshold: ${AGE_THRESHOLD:25}
