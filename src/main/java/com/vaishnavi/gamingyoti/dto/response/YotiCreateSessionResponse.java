@@ -13,9 +13,6 @@ public class YotiCreateSessionResponse {
     @JsonProperty("status")
     private String status;
 
-    public YotiCreateSessionResponse() {
-    }
-
     public String getId() {
         return id;
     }
