@@ -19,7 +19,6 @@ import org.slf4j.LoggerFactory;
 public class YotiClient {
 
     private static final String BASE_URL = "https://age.yoti.com/api/v1";
-    private static final String CALLBACK_URL = "https://gaming-yoti.onrender.com/result.html";
     private final RestClient restClient = RestClient.create();
 
     private final YotiProperties properties;
@@ -66,7 +65,7 @@ public class YotiClient {
         docScan.setRetryLimit(1);
         Callback callback = new Callback();
         callback.setAuto(true);
-        callback.setUrl(CALLBACK_URL);
+        callback.setUrl(properties.getCallbackUrl());
 
         CreateSessionRequest request = new CreateSessionRequest();
         request.setType("OVER");

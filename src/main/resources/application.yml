@@ -9,3 +9,4 @@ yoti:
   api-key: ${YOTI_API_KEY:}
   sdk-id: ${YOTI_SDK_ID:}
   age-threshold: ${AGE_THRESHOLD:25}
+  callback-url: ${YOTI_CALLBACK_URL}

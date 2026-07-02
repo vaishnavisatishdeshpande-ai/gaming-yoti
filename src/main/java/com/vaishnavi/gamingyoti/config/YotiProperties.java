@@ -8,6 +8,7 @@ public class YotiProperties {
     private String apiKey;
     private String sdkId;
     private int ageThreshold;
+    private String callbackUrl;
 
     public String getApiKey() {
         return apiKey;
@@ -31,5 +32,13 @@ public class YotiProperties {
 
     public void setAgeThreshold(int ageThreshold) {
         this.ageThreshold = ageThreshold;
+    }
+
+    public String getCallbackUrl() {
+        return callbackUrl;
+    }
+
+    public void setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
     }
 }

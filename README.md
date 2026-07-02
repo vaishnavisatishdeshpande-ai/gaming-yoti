@@ -37,6 +37,7 @@ Set the following environment variables before running the application.
 export YOTI_API_KEY=<your_yoti_api_key>
 export YOTI_SDK_ID=<your_yoti_sdk_id>
 export AGE_THRESHOLD=25
+export YOTI_CALLBACK_URL=https://your-domain.com/result.html
 ```
 
 ### Windows
@@ -45,6 +46,7 @@ export AGE_THRESHOLD=25
 set YOTI_API_KEY=<your_yoti_api_key>
 set YOTI_SDK_ID=<your_yoti_sdk_id>
 set AGE_THRESHOLD=25
+set YOTI_CALLBACK_URL=https://your-domain.com/result.html
 ```
 
 ---
@@ -86,6 +88,7 @@ docker run \
 -e YOTI_API_KEY=<your_yoti_api_key> \
 -e YOTI_SDK_ID=<your_yoti_sdk_id> \
 -e AGE_THRESHOLD=25 \
+-e YOTI_CALLBACK_URL=<your_callback_url> \
 -p 8080:8080 \
 gaming-yoti
 ```
@@ -102,4 +105,4 @@ http://localhost:8080
 
 - The live application is available at **https://gaming-yoti.onrender.com**.
 - API keys and SDK IDs are provided through environment variables and are **not** included in this repository.
-- No personally identifiable information (PII) is stored in the repository.# Gaming Yoti
+- No personally identifiable information (PII) is stored in the repository.
