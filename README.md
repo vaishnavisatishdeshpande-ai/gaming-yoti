@@ -17,8 +17,9 @@ The application is deployed on Render and can be accessed at:
 - Git
 
 ---
+# Instructions on how to run it locally
 
-## Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/vaishnavisatishdeshpande-ai/gaming-yoti.git
@@ -27,11 +28,11 @@ cd gaming-yoti
 
 ---
 
-## Configure Environment Variables
+### Configure Environment Variables
 
 Set the following environment variables before running the application.
 
-### macOS / Linux
+#### macOS / Linux
 
 ```bash
 export YOTI_API_KEY=<your_yoti_api_key>
@@ -40,7 +41,7 @@ export AGE_THRESHOLD=25
 export YOTI_CALLBACK_URL=https://your-domain.com/result.html
 ```
 
-### Windows
+#### Windows
 
 ```cmd
 set YOTI_API_KEY=<your_yoti_api_key>
@@ -51,7 +52,7 @@ set YOTI_CALLBACK_URL=https://your-domain.com/result.html
 
 ---
 
-## Build the Application
+### Build the Application
 
 ```bash
 ./mvnw clean package
@@ -59,7 +60,7 @@ set YOTI_CALLBACK_URL=https://your-domain.com/result.html
 
 ---
 
-## Run the Application
+### Run the Application
 
 ```bash
 ./mvnw spring-boot:run
@@ -75,13 +76,13 @@ http://localhost:8080
 
 ## Running with Docker (Optional)
 
-Build the Docker image:
+### Build the Docker image:
 
 ```bash
 docker build -t gaming-yoti .
 ```
 
-Run the container:
+### Run the container:
 
 ```bash
 docker run \
@@ -93,7 +94,7 @@ docker run \
 gaming-yoti
 ```
 
-The application will be available at:
+### The application will be available at:
 
 ```
 http://localhost:8080
